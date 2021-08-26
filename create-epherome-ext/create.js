@@ -42,7 +42,8 @@ async function createExt(name, target, language) {
   console.log("We suggest that you begin by typing:\n");
   console.log(`  ${green("cd")} ${name}`);
   console.log(`  ${green("npm")} install`);
-  console.log(`  ${green("npm")} run dev\n`);
+  console.log(`  ${green("npm")} run build\n`);
+  console.log(`Learn more at documents: ${green("https://epherome.com/docs")}`);
   console.log("Happy hacking!");
 }
 
