@@ -8,6 +8,10 @@ const path = require("path");
 
 const args = process.argv.slice(2);
 
+function removePrefix(src, pre) {
+  return src.startsWith(pre) ? src.substring(pre.length) : src;
+}
+
 if (args[0] === "build") {
   const cwd = process.cwd();
   try {
@@ -53,7 +57,7 @@ if (args[0] === "build") {
             JSON.stringify({
               name: pkg.name,
               version: pkg.version,
-              apiVersion: pkg.dependencies["epherome-ext"],
+              apiVersion: removePrefix(pkg.dependencies["epherome-ext"], "^"),
               ...pkg.epherome,
             })
           );

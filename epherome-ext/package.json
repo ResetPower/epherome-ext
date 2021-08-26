@@ -1,6 +1,6 @@
 {
   "name": "epherome-ext",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Epherome extension API and CLI toolkit",
   "main": "out/index.js",
   "scripts": {
