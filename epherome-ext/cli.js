@@ -47,19 +47,19 @@ if (args[0] === "build") {
           }
           throw err;
         } else {
+          const extMeta = path.join(cwd, "dist", "ext.json");
+          fs.writeFileSync(
+            extMeta,
+            JSON.stringify({
+              name: pkg.name,
+              version: pkg.version,
+              apiVersion: pkg.dependencies["epherome-ext"],
+              ...pkg.epherome,
+            })
+          );
           console.log(`${chalk.bold("Congrats 🎉!")} Built successfully.`);
         }
       }
-    );
-    const extMeta = path.join(cwd, "dist", "ext.json");
-    fs.writeFileSync(
-      extMeta,
-      JSON.stringify({
-        name: pkg.name,
-        version: pkg.version,
-        apiVersion: pkg.dependencies["epherome-ext"],
-        ...pkg.epherome,
-      })
     );
   } catch {
     throw new Error(`${chalk.bold("OMG 😱")} package.json not exist!`);

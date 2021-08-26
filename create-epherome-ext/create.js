@@ -29,8 +29,8 @@ async function fillInTemplate(name, target) {
   pkg.epherome.translations.default = name;
   const { default: latestVersion } = await import("latest-version");
   const ver = await latestVersion("epherome-ext");
-  pkg.dependencies["epherome-ext"] = ver;
-  writeFileSync(pkgPath, JSON.stringify(pkg));
+  pkg.dependencies["epherome-ext"] = `^${ver}`;
+  writeFileSync(pkgPath, JSON.stringify(pkg, null, 2));
 }
 
 async function createExt(name, target, language) {

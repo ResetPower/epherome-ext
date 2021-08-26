@@ -1,6 +1,6 @@
 {
   "name": "create-epherome-ext",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Scaffolding your first Epherome extension",
   "bin": {
     "create-epherome-ext": "cli.js"
