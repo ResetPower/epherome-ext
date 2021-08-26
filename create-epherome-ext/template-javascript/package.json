@@ -1,0 +1,21 @@
+{
+  "name": "name",
+  "version": "0.0.0",
+  "description": "Epherome extension template for JavaScript",
+  "scripts": {
+    "build": "eph-ext build"
+  },
+  "author": "ResetPower",
+  "license": "GPL-3.0-or-later",
+  "epherome": {
+    "translations": {
+      "default": "name"
+    }
+  },
+  "dependencies": {
+    "epherome-ext": "latest"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2"
+  }
+}
